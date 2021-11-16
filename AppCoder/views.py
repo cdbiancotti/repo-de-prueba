@@ -6,7 +6,7 @@ from .models import Curso
 # Create your views here.
 
 def crear_curso(request):
-    curso = Curso(nombre='After nuevo', camada=25)
+    curso = Curso(nombre='After viejo', camada=25)
     curso.save()
     
     return HttpResponse(f'{curso.nombre} {curso.camada}')
