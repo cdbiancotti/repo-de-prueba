@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 from .models import Curso
 
@@ -21,3 +22,10 @@ def ver_curso(request):
         texto += f'Curso: {curso.nombre} <br>'
     
     return HttpResponse(f'{curso1}')
+
+
+def prueba_template(request):
+    # template = loader.get_template('Appcoder/index.html')
+    # documento = template.render({})
+    # return HttpResponse(documento)
+    return render(request, 'Appcoder/index.html', {})
